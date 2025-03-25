@@ -18,4 +18,14 @@ public class Enderecos {
     private String uf;
     private String numero;
     private String complemento;
+
+    public Enderecos(DadosCadastroEnderecos endereco) {
+        this.logradouro = endereco.logradouro();
+        this.bairro = endereco.bairro();
+        this.cep = endereco.cep();
+        this.cidade = endereco.cidade();
+        this.uf = endereco.uf();
+        this.numero = endereco.numero();
+        this.complemento = endereco.complemento();
+    }
 }

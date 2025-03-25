@@ -14,7 +14,7 @@ import med.volli.api.enderecos.Enderecos;
 public class Medicos {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String nome;
     private String email;
@@ -25,4 +25,12 @@ public class Medicos {
 
     @Embedded
     private Enderecos endereco;
+
+    public Medicos(DadosCadastroMedicos dados) {
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.crm = dados.crm();
+        this.especialidade = dados.especialidade();
+        this.endereco = new Enderecos(dados.endereco());
+    }
 }
