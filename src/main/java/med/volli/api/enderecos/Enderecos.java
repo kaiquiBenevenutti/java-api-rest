@@ -1,4 +1,21 @@
 package med.volli.api.enderecos;
 
-public record Enderecos(String logradouro, String bairro, String cep, String cidade, String uf, String numero, String complemento) {
+import jakarta.persistence.Embeddable;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Enderecos {
+
+    private String logradouro;
+    private String bairro;
+    private String cep;
+    private String cidade;
+    private String uf;
+    private String numero;
+    private String complemento;
 }
