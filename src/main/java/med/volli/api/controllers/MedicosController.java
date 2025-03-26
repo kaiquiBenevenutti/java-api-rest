@@ -35,4 +35,9 @@ public class MedicosController {
         var medico = repository.getOne(dados.id());
         medico.AtualizaDados(dados);
     }
+
+    @DeleteMapping("/{id}")
+    public void ExcluirMedico(@PathVariable Long id){
+        repository.deleteById(id);
+    }
 }
