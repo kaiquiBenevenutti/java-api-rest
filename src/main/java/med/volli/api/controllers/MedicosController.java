@@ -38,6 +38,7 @@ public class MedicosController {
 
     @DeleteMapping("/{id}")
     public void ExcluirMedico(@PathVariable Long id){
-        repository.deleteById(id);
+        var medico = repository.getReferenceById(id);
+        medico.ExcluirMedico();
     }
 }

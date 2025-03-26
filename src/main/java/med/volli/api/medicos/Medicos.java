@@ -28,7 +28,10 @@ public class Medicos {
     @Embedded
     private Enderecos endereco;
 
+    private boolean ativo;
+
     public Medicos(DadosCadastroMedicos dados) {
+        this.ativo = true;
         this.nome = dados.nome();
         this.email = dados.email();
         this.telefone = dados.telefone();
@@ -47,5 +50,9 @@ public class Medicos {
         if(dados.endereco() != null){
             this.endereco.AtualizaDados(dados.endereco());
         }
+    }
+
+    public void ExcluirMedico() {
+        this.ativo = false;
     }
 }
