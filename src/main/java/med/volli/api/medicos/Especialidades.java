@@ -4,5 +4,6 @@ public enum Especialidades {
     ORTOPEDIA,
     CARDIOLOGIA,
     GINECOLOGIA,
+    HIPNOTERAPEUTA,
     DERMATOLOGIA;
 }
