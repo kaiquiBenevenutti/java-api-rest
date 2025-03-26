@@ -26,7 +26,7 @@ public class MedicosController {
 
     @GetMapping
     public Page<DadosListagemMedicos> ListarMedicos(@PageableDefault(sort = {"nome"}) Pageable pageable){
-        return repository.findAll(pageable).map(DadosListagemMedicos::new);
+        return repository.findAllByAtivoTrue(pageable).map(DadosListagemMedicos::new);
     }
 
     @Transactional
@@ -36,6 +36,7 @@ public class MedicosController {
         medico.AtualizaDados(dados);
     }
 
+    @Transactional
     @DeleteMapping("/{id}")
     public void ExcluirMedico(@PathVariable Long id){
         var medico = repository.getReferenceById(id);
