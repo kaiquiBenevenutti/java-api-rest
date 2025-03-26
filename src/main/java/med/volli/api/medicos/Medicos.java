@@ -5,7 +5,7 @@ import jakarta.validation.Valid;
 import lombok.*;
 import med.volli.api.enderecos.Enderecos;
 
-@Entity(name = "vollmed")
+@Entity(name = "Medico")
 @Table(name = "medicos")
 @Getter
 @NoArgsConstructor
