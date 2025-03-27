@@ -48,7 +48,7 @@ public class Medicos {
             this.telefone = dados.telefone();
         }
         if(dados.endereco() != null){
-            this.endereco.AtualizaDados(dados.endereco());
+            this.endereco.AtualizaDadosMedico(dados.endereco());
         }
     }
 
