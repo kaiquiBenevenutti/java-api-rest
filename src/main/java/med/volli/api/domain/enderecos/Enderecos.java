@@ -1,10 +1,9 @@
-package med.volli.api.enderecos;
+package med.volli.api.domain.enderecos;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.volli.api.pacientes.DadosAtualizaPaciente;
 
 @Embeddable
 @Getter

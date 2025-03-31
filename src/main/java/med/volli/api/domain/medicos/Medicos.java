@@ -1,9 +1,9 @@
-package med.volli.api.medicos;
+package med.volli.api.domain.medicos;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.*;
-import med.volli.api.enderecos.Enderecos;
+import med.volli.api.domain.enderecos.Enderecos;
 
 @Entity(name = "Medico")
 @Table(name = "medicos")
